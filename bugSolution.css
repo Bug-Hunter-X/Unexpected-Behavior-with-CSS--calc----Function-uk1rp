@@ -1,0 +1,26 @@
+To mitigate the issues with `calc()`, follow these best practices:
+
+1. **Ensure Unit Consistency:** Perform calculations using consistent units. Convert all units to the same type before calculation. For example, convert pixels to percentages or vice versa.
+
+2. **Avoid Deep Nesting:** Limit nesting of `calc()` functions.  If your calculations are becoming too complex, consider breaking them down into intermediate variables or using JavaScript calculations for more intricate scenarios.
+
+3. **Test Across Browsers:** Thoroughly test your CSS across different browsers and browser versions to identify potential discrepancies in `calc()` interpretation.
+
+4. **Use Parentheses for Clarity:** Explicitly use parentheses to define the order of operations within `calc()` expressions, especially when dealing with multiple operators or different units.
+
+**Example of Improved `calc()` usage:**
+
+Instead of:
+
+```css
+width: calc(100% - 20px);
+```
+
+Use a more descriptive and robust solution:
+
+```css
+--sidebar-width: 20px;
+width: calc(100% - var(--sidebar-width));
+```
+
+This makes the code easier to understand and maintain, and it separates the constant value from the calculation.
