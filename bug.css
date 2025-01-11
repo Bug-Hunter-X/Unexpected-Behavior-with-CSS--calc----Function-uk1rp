@@ -1,0 +1,5 @@
+The CSS property `calc()` is used to perform calculations within CSS. However, there can be unexpected behavior when using `calc()` with units that are not compatible or when the calculation results in an invalid value.  For example, if you try to subtract a length from a percentage directly (e.g., `width: calc(100% - 20px);`), it's generally fine, but it can become problematic with more complex operations, especially across different units.
+
+Another issue arises when dealing with nested `calc()` functions.  While they are allowed, excessive nesting can make the CSS difficult to read and debug and may lead to unexpected outcomes due to operator precedence and unit handling.
+
+Finally, browser support for `calc()` can vary slightly across different versions and browsers.  Older browsers might not support all the features or might have subtle differences in how they interpret the calculations.
